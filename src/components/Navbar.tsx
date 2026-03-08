@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" className="font-heading text-2xl font-bold text-foreground">
+          <a href="#home" className={`font-heading text-2xl font-bold transition-colors duration-300 ${scrolled ? 'text-foreground' : 'text-white'}`}>
             Sweet <span className="text-gradient-gold">Crumbs</span>
           </a>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-body text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className={`font-body text-sm font-medium transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${scrolled ? 'text-muted-foreground hover:text-foreground' : 'text-white/80 hover:text-white'}`}
               >
                 {link.label}
               </a>
@@ -56,7 +56,7 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-foreground"
+            className={`md:hidden transition-colors duration-300 ${scrolled ? 'text-foreground' : 'text-white'}`}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

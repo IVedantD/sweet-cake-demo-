@@ -66,7 +66,7 @@ const Footer = () => {
 
         <div className="border-t border-cream/10 mt-12 pt-8 text-center">
           <p className="font-body text-sm text-cream/40">
-            © 2024 Sweet Crumbs. All rights reserved. Made with ♥
+            © 2026 Sweet Crumbs. All rights reserved. Made with ♥
           </p>
         </div>
       </div>

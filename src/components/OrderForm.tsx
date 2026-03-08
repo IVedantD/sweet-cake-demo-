@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
 import { Send } from "lucide-react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
 
 const OrderForm = () => {
@@ -43,7 +43,7 @@ const OrderForm = () => {
 
             <div className="space-y-6">
               {[
-                { label: "Visit Us", value: "123 Baker Street, Sweet Town, ST 12345" },
+                { label: "Visit Us", value: "Shivaji Nagar, Pune" },
                 { label: "Call Us", value: "+1 (555) 123-4567" },
                 { label: "Email", value: "hello@sweetcrumbs.com" },
                 { label: "Hours", value: "Mon-Sat: 8am - 7pm | Sun: 9am - 5pm" },
@@ -53,6 +53,19 @@ const OrderForm = () => {
                   <p className="font-body text-muted-foreground">{info.value}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8 rounded-2xl overflow-hidden w-full h-[250px] shadow-sm border border-border/50">
+              <iframe
+                title="Google Map Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15132.89437937397!2d73.83445831613203!3d18.518882098670845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf8d13b41e8d%3A0xe5a363d5c56dfd2c!2sShivajinagar%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710186361848!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </motion.div>
 
