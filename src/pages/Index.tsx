@@ -1,16 +1,16 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import FeaturedCakes from "@/components/FeaturedCakes";
 import AboutUs from "@/components/AboutUs";
-import SpecialOccasions from "@/components/SpecialOccasions";
-import Gallery from "@/components/Gallery";
-import Testimonials from "@/components/Testimonials";
-import OrderForm from "@/components/OrderForm";
+import FeaturedCakes from "@/components/FeaturedCakes";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import OrderForm from "@/components/OrderForm";
+import SpecialOccasions from "@/components/SpecialOccasions";
+import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <FeaturedCakes />
